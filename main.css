@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+  --clr-pale-blue: hsl(225, 100%, 94%);
+  --clr-very-pale-blue: hsl(225, 100%, 98%);
+  --clr-bright-blue: hsl(245, 75%, 52%);
+  --clr-dark-blue: hsl(223, 47%, 23%);
+  --clr-desaturated-blue: hsl(224, 23%, 55%);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  background-image: url(images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--clr-pale-blue);
+  height: 100%;
+  padding: 2rem;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card {
+  max-width: 450px;
+  background-color: white;
+  border-radius: 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.card-img {
+  overflow: hidden;
+  width: 100%;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.card-body {
+  padding: 0 2rem;
+}
+
+.card-title {
+  margin: 1.5rem 0;
+  color: var(--clr-dark-blue);
+  font-weight: 900;
+}
+
+.card-desc {
+  width: 80%;
+  margin: 1.5rem auto;
+  color: var(--clr-desaturated-blue);
+}
+
+.card-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2rem 0;
+  background-color: var(--clr-very-pale-blue);
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+
+.card-price__left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.price-desc {
+  color: var(--clr-desaturated-blue);
+}
+
+.price-desc p:first-child {
+  color: var(--clr-dark-blue);
+  font-weight: 700;
+}
+
+.card-price__right a {
+  color: var(--clr-bright-blue);
+  font-weight: 700;
+}
+
+.card-price__right a:hover {
+  opacity: 0.8;
+}
+
+.card-btn {
+  display: block;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 0.75rem;
+  color: var(--clr-desaturated-blue);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.card-btn:hover:not(.main) {
+  color: var(--clr-dark-blue);
+}
+
+.main {
+  background-color: var(--clr-bright-blue);
+  color: white;
+  box-shadow: 0 10px 20px var(--clr-desaturated-blue);
+}
+
+.main:hover {
+  opacity: 0.8;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 475px) {
+  .container {
+    padding: 1rem;
+  }
+  .card {
+    width: 300px;
+  }
+  .card-price {
+    flex-direction: column;
+  }
+}
